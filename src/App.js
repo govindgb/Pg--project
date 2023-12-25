@@ -1,6 +1,8 @@
 import React from 'react';
-import Login from './components/auth/ssrc/inde'
-// import { Index } from 'react-login-page';
+import Login from './components/auth/Login';
+
+
+
 function App() {
   return (
     <div className="App">
