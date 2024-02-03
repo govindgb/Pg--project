@@ -1,0 +1,53 @@
+.bsty{
+    text-align: center;
+    margin-top: 70px;
+}
+ .container{
+    background-color: bisque;
+   width: 30%;
+   text-align: center;
+   position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  margin-left: 35%;
+  margin-top: 10px;
+  padding: 10px;
+  
+} 
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .bicon,
+  .ticon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .tab-container {
+    display: flex;
+    margin-left: 43%;
+     margin-top: 70px; 
+  }
+  
+  .tab {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #eaeaea; /* Add your active tab background color */
+  }
+
+  .location-selector-container{
+    width: 200px;
+    display: flex;
+  }
+  .vv{
+    display: flex;
+    margin-left: 400px;
+  }
