@@ -1,19 +1,19 @@
-// App.js
+// Signup.js
 
 import React, { useState } from "react";
-// import app.css here
-// import "../../App.css";
-import "../../utils/Login.css";
+import "../../Signup.css"; // Import your CSS file
 
-function Login() {
+function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      // Add your signup API endpoint
+      const response = await fetch("http://localhost:5000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,14 +30,11 @@ function Login() {
 
   return (
     <div className="App">
-      <div className="login-container">
-        {/* <p Style="margin-Right: 120px">Welcome to</p> */}
-        <h2>PG-MANAGEMENT</h2>
-        <form onSubmit={handleLogin}>
+      <div className="signup-container">
+        <h2>Create an Account</h2>
+        <form onSubmit={handleSignup}>
           <div className="input-group">
-            <label htmlFor="username" Style="margin-Right: 100px">
-              Username
-            </label>
+            <label htmlFor="username" Style="margin-Right: 100px">Username</label>
             <input
               type="text"
               placeholder="Username"
@@ -48,18 +45,15 @@ function Login() {
             />
           </div>
           <div className="input-group">
-            <label htmlFor="password" Style="margin-Right: 110px">
-              Password
-            </label>
-
+            <label htmlFor="password" Style="margin-Right: 100px">Password</label>
             <input
-            className="input-group"
               type={showPassword ? "text" : "password"}
-              Style="margin-Right: -18px"
+              Style="margin-Right: -20px"
               id="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
             <span
               className="password-toggle"
@@ -68,14 +62,20 @@ function Login() {
               {showPassword ? "👁️" : "👁️‍🗨️"}
             </span>
           </div>
-          <div className="forgot-password-link">
-            <a href="/forgot-password">Forgot Password?</a>
+          <div className="input-group">
+            <label htmlFor="confirmPassword" Style="margin-Right: 40px">Confirm Password</label>
+            <input
+              type="password"
+              
+              id="confirmPassword"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
           </div>
           <h2>
-            <button className="bstyle" type="submit" >Login</button>
-          </h2>
-          <h2>
-            <button className="Gstyle"type="submit"  >Login with Google</button>
+            <button type="submit" className="sub">Sign Up</button>
           </h2>
         </form>
       </div>
@@ -83,4 +83,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

@@ -1,0 +1,73 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: whitesmoke;
+    color: rgb(31, 24, 24);
+    margin-bottom: auto;
+    width: auto;
+  }
+  
+  
+  
+  .header-button {
+    background-color: #009587;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-right: 100px;
+  }
+  
+ .icon{
+    /* background-color: rgb(146, 14, 14); */
+
+    color: #0c0e0d;
+ }
+
+
+  .header-b{
+    background-color: whitesmoke;
+    color:black;
+    display: flex;
+    margin-left: -100px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    
+  }
+  .header-g{
+    background-color:whitesmoke;
+    margin-left: -50px;
+    color:black;
+    display: flex;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+   
+  }
+  
+  
+  
+ 
+  .header-menu.open {
+    display: block;
+  }
+  
+  .header-menu-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  .payment{
+    color: #0c0e0d;
+    margin-left: 510px;
+    float: left;
+    margin-top: -30px;
+    background-color: whitesmoke;
+    padding: 3px 10px;
+  }
